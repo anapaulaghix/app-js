@@ -1,19 +1,31 @@
-
+import React from 'react';
 import './App.css';
-import HelloWorld from './components/HelloWorld';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Home from "./components/pages/Home";
+import Company from "./components/pages/Company";
+import Contact from "./components/pages/Contact";
 
 function App() {
-
-  const url = `https://via.placeholder.com/150`
-  
-  
   return (
-    <div className="App">
-    <h1>Olá react!</h1>
-    <p>Meu primeiro App</p>
-    <img src={url} alt=""></img>
-    <HelloWorld/>
-    </div>
+    <Router>
+      <div>
+      <link to="./">Home</link>  
+      <link to="./Contact">Quem Somos</link>
+      <link to="./Company">Dúvidas Frequentes</link>
+      </div>
+
+      <Routes>
+      <Route exact path="">
+        <Home />
+      </Route>
+      <Route exact path="/Company">
+        <Company />
+      </Route>
+      <Route exact path="/Contact">
+        <Contact />
+      </Route>
+      </Routes>
+    </Router>
   );
 }
 
