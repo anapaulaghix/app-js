@@ -20,11 +20,13 @@ function App() {
         <Link to="/contact">Contato</Link>
         <Link to="/company">Quem Somos</Link>
       </div>
+      <Container customClass='min-height'>
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Company" element={<Company />} />
           <Route path="/Contact" element={<Contact />} />
       </Routes>
+      </Container>
       <p>Footer</p>
     </Router>
   )
