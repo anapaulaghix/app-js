@@ -5,23 +5,19 @@ import logo from '../../img/logoicon.png'
 
 function Navbar(){
     return(
-        <nav class={styles.navbar}>
+        <nav className={styles.navbar}>
             <Container>
             <Link to="/">
-                    <img src={logo} alt="template" />
+                    <img src={logo}></img>
                 </Link>
-                <ul class={styles.list}>
-                    <li>
+                <ul className={styles.list}>
+                    <li className={styles.item}>
                     <Link to="/">Home</Link>
                     </li>
-                </ul>
-                <ul>
-                    <li>
+                    <li className={styles.item}>
                     <Link to="/contact">Dúvidas Frequentes</Link>
                     </li>
-                </ul>
-                <ul>
-                    <li>
+                    <li className={styles.item}>
                     <Link to="/company">Quem Somos</Link>
                     </li>
                 </ul>

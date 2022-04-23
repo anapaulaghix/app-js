@@ -10,3 +10,18 @@
     list-style: none;
     align-items: center;
 }
+
+.item{
+    margin-right: 1em;
+}
+
+.item a{
+    color: aliceblue;
+    text-decoration: none;
+
+}
+
+.item a:hover{
+    color: rgb(176, 22, 214);
+    text-decoration: none;
+}
