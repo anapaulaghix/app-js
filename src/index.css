@@ -13,6 +13,7 @@ code {
 }
 
 html, body, #root{
+  background-image: url(../src/img/fundo.jpg);
   background-color: #efefef;
   height: 100%;
 }

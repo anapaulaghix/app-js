@@ -1,4 +1,5 @@
 .home_container{
+    background-position: center center;
     flex-direction: column;
     display: flex;
     align-items: center;

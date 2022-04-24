@@ -1,6 +1,7 @@
 import styles from './Home.module.css'
 import template from '../../img/template.png'
 import LinkButton from '../layout/Link.Button'
+import fundo from '../../img/fundo.jpg'
 
 function Home(){
     return (
