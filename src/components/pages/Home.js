@@ -7,7 +7,7 @@ function Home(){
         <section className={styles.home_container}>
             <img src={template} alt='template'></img>
             <h1>Escolha sua opção</h1>
-            <LinkButton to="/Doar" text=" Quero Doar"></LinkButton>
+            <LinkButton to="/Doar" text="Quero Doar"></LinkButton>
             <LinkButton to="/Receber" text="Quero Receber"></LinkButton>
             <p>Lembrando que você não terá contato com seu doador! Somos uma Instuição!</p> 
             <p>Você pode levar sua doação ou buscar o que escolheu receber na instituição mais próxima de você.</p>
