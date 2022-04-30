@@ -11,7 +11,7 @@ function Footer(){
                 <FaInstagram />
             </li>
         </ul>
-        <p className={styles.copy_right}><span>Solidariti Nos acompanhem nas nossas redes sociais</span> &copy; 2022</p>
+        <p className={styles.copy_right}><span>Solidariti | Nos acompanhem nas nossas redes sociais</span> &copy; 2022</p>
 
     </footer>)
 }
