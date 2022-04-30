@@ -6,10 +6,19 @@
     justify-content: center;
 }
 
-.home_container p{
+.home_container h1{
     font-size: 2em;
+    margin-bottom: .5em;
+    margin: 0 .1em;
     text-align: left;
-
+    background-color: transparent;
+    color:aliceblue;
+}
+.home_container p{
+    padding: 0.5em;
+    font-size: 1em;
+    margin-bottom: 3em;
+    color:aliceblue;
 }
 
 .home_container img{
