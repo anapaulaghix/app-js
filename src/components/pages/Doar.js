@@ -1,7 +1,7 @@
 function Doar(){
     return(
         <div>
-            <h1>Escolha a categoria</h1>
+            <h1>Escolha por categoria</h1>
         </div>
     )
 }
