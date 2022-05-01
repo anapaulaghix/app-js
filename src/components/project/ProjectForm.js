@@ -1,9 +1,9 @@
+import styles from './ProjectForm.module.css'
+
 function ProjectForm(){
     return (
-        <form>
-            <select name="category_id">
-                <option>Selecione a categoria do produto</option>
-            </select>
+        <form> 
+
         </form>
     )
 }
