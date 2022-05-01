@@ -10,7 +10,7 @@ function Home(){
             <LinkButton to="/Doar" text="Quero Doar"></LinkButton>
             <LinkButton to="/Receber" text="Quero Receber"></LinkButton>
             <p>Lembrando que você não terá contato com seu doador! Somos uma Instuição!</p> 
-            <p>Você pode levar sua doação ou buscar o que escolheu receber na instituição mais próxima de você.</p>
+            <p>Você deve levar sua doação ou buscar o que escolheu receber na instituição mais próxima de você.</p>
             <p>Aceitamos alimentos, produtos, etc. Ajude como quiser. </p> 
         </section>
     )
