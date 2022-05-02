@@ -6,7 +6,9 @@ function ProjectForm(){
             <select name="category_id">
                 <option>Selecione o tipo de produto</option>
             </select>
-
+            <div>
+            <input type='submit' value='Adicionar ao carrinho'></input>
+            </div>
         </form>
     )
 }
