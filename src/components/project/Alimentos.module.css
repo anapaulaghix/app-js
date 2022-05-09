@@ -8,6 +8,11 @@
 }
 
 .img{
-    width: 399px;
+    image-orientation: from-image;
+    width: 398px;
     height: 300px;
+}
+
+h1{
+    text-align: center;
 }
