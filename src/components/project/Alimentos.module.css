@@ -1,0 +1,13 @@
+.container{
+    width: 400px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.img{
+    width: 399px;
+    height: 300px;
+}

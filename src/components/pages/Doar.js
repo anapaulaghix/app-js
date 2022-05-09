@@ -10,6 +10,7 @@ function Doar(){
         <div className={styles.doar_container}>
         <h1>Escolha por categorias</h1>
         <p>Só trabalhamos com o que está descrito em cada categoria, não aceitamos outras coisas.</p>
+        <br></br>
         <Alimentos />
         <Roupas/>
         <Higiene/>
