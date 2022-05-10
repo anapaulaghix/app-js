@@ -12,6 +12,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Doar from './components/pages/Doar'
 import Receber from './components/pages/Receber'
+import Carrinho from './components/pages/Carrinho'
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Doar" element={<Doar />} />
           <Route path="/Receber" element={<Receber />} />
+          <Route path="/Carrinho" element={<Carrinho />} />
+
       </Routes>
       </Container>
       <Footer />
