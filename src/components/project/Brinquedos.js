@@ -1,6 +1,6 @@
 import Select from '../form/Select'
 import img from '../../img/brinquedo.jpg'
-import styles from './Alimentos.module.css'
+import styles from './Brinquedos.module.css'
 
 function Brinquedos(){
     return(
