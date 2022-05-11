@@ -1,6 +1,5 @@
 .container {
     position: relative;
-    align-items: center;
     width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -14,5 +13,6 @@
 
 .start{
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
