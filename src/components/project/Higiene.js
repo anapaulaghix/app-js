@@ -1,5 +1,5 @@
 import Select from '../form/Select'
-import img from '../../img/higiene.jpg'
+import img from '../../img/higiene.png'
 import styles from './Alimentos.module.css'
 
 

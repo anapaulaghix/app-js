@@ -1,5 +1,5 @@
 import Select from '../form/Select'
-import img from '../../img/comida.jpeg'
+import img from '../../img/Alimentos.png'
 import styles from './Alimentos.module.css'
 
 function Alimentos(){
