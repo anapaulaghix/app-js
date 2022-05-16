@@ -1,7 +1,7 @@
-import Checkbox from '../form/Checkbox'
+import Checkbox from './Checkbox'
 import * as React from 'react';
 
-const Select = () => {
+const Checks = () => {
   const [checkedOne, setCheckedOne] = React.useState(false);
 
   const handleChangeOne = () => {
@@ -19,4 +19,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default Checks
