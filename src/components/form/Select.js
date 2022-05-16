@@ -1,14 +1,22 @@
-import styles from './Select.module.css'
+import Checkbox from '../form/Checkbox'
+import * as React from 'react';
 
-function Select({text, name, options, handleOnChange, value}){
-    return(
-        <div className={styles.form_control}>
-        <label htmlFor={name}>{text}</label>
-        <select name={name} id={name}>
-            <option>Selecione os produtos</option>
-        </select>
-        </div>
-    )
-}
+const Select = () => {
+  const [checkedOne, setCheckedOne] = React.useState(false);
 
-export default Select
+  const handleChangeOne = () => {
+    setCheckedOne(!checkedOne);
+  };
+
+  return (
+    <div>
+      <Checkbox
+        label="Value 1"
+        value={checkedOne}
+        onChange={handleChangeOne}
+      />
+    </div>
+  );
+};
+
+export default Select;
