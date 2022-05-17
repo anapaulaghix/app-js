@@ -9,50 +9,35 @@ function Select(){
   onKeyPressFn={function noRefCheck(){}}
   onRemove={function noRefCheck(){}}
   onSearch={function noRefCheck(){}}
+  onSelect={function noRefCheck(){}}
   options={[
     {
       cat: 'Group 1',
-      key: 'Arroz'
+      key: 'Escova de dentes'
     },
     {
       cat: 'Group 1',
-      key: 'Feijão'
+      key: 'Pasta de dentes'
     },
     {
       cat: 'Group 1',
-      key: 'Macarrão'
+      key: 'Fio dental'
     },
     {
       cat: 'Group 2',
-      key: 'Óleo'
+      key: 'Papel higiênico'
     },
     {
       cat: 'Group 2',
-      key: 'Farinha de trigo/fubá'
+      key: 'Desinfetante'
     },
     {
       cat: 'Group 2',
-      key: 'Sal'
+      key: 'Vassoura/rodo'
     },
     {
       cat: 'Group 2',
-      key: 'Café'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Molho de tomate'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Bolacha água e sal'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Sardinha'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Cesta básica completa'
+      key: 'Água sanitária'
     }
   ]}
 />

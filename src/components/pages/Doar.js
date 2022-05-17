@@ -23,8 +23,8 @@ function Doar(){
         <Brinquedos/>
         <Pets />
         <Moveis/>
-        </Container>
         <LinkButton to="/Carrinho" text="Carrinho"/>
+        </Container>
         </div>
     )
 }

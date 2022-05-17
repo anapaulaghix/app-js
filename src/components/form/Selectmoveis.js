@@ -9,50 +9,27 @@ function Select(){
   onKeyPressFn={function noRefCheck(){}}
   onRemove={function noRefCheck(){}}
   onSearch={function noRefCheck(){}}
+  onSelect={function noRefCheck(){}}
   options={[
     {
       cat: 'Group 1',
-      key: 'Arroz'
+      key: 'Cama'
     },
     {
       cat: 'Group 1',
-      key: 'Feijão'
+      key: 'Sofá'
     },
     {
       cat: 'Group 1',
-      key: 'Macarrão'
+      key: 'Geladeira'
     },
     {
       cat: 'Group 2',
-      key: 'Óleo'
+      key: 'Armário'
     },
     {
       cat: 'Group 2',
-      key: 'Farinha de trigo/fubá'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Sal'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Café'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Molho de tomate'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Bolacha água e sal'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Sardinha'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Cesta básica completa'
+      key: 'Guarda roupa'
     }
   ]}
 />

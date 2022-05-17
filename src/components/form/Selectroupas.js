@@ -9,50 +9,43 @@ function Select(){
   onKeyPressFn={function noRefCheck(){}}
   onRemove={function noRefCheck(){}}
   onSearch={function noRefCheck(){}}
+  onSelect={function noRefCheck(){}}
   options={[
     {
       cat: 'Group 1',
-      key: 'Arroz'
+      key: 'Vestido'
     },
     {
       cat: 'Group 1',
-      key: 'Feijão'
+      key: 'Casaco'
     },
     {
       cat: 'Group 1',
-      key: 'Macarrão'
+      key: 'Camiseta feminina'
     },
     {
       cat: 'Group 2',
-      key: 'Óleo'
+      key: 'Camiseta masculina'
     },
     {
       cat: 'Group 2',
-      key: 'Farinha de trigo/fubá'
+      key: 'Calça'
     },
     {
       cat: 'Group 2',
-      key: 'Sal'
+      key: 'Shorts'
     },
     {
       cat: 'Group 2',
-      key: 'Café'
+      key: 'Bermuda'
     },
     {
       cat: 'Group 2',
-      key: 'Molho de tomate'
+      key: 'Chinelo infantil'
     },
     {
       cat: 'Group 2',
-      key: 'Bolacha água e sal'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Sardinha'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Cesta básica completa'
+      key: 'Meia'
     }
   ]}
 />
