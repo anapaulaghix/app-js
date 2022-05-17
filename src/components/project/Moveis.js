@@ -1,4 +1,4 @@
-import Select from '../form/Select'
+
 import img from '../../img/pngwing.png'
 import styles from './Alimentos.module.css'
 
@@ -8,7 +8,6 @@ function Moveis(){
         <div className={styles.container}>
         <h1>Móveis</h1>
         <img className={styles.img} src={img} alt='logobrinquedo'></img>
-        <Select />
         </div>
     )
 }

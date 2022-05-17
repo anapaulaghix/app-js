@@ -1,14 +1,47 @@
-import styles from './Select.module.css'
+import Multiselect from "multiselect-react-dropdown"
 
-function Select({text, name, options, handleOnChange, value}){
+function Select(){
     return(
-        <div className={styles.form_control}>
-        <label htmlFor={name}>{text}</label>
-        <select name={name} id={name}>
-            <option>Selecione os produtos</option>
-        </select>
+        <div>
+            <Multiselect
+  displayValue="key"
+  onKeyPressFn={function noRefCheck(){}}
+  onRemove={function noRefCheck(){}}
+  onSearch={function noRefCheck(){}}
+  onSelect={function noRefCheck(){}}
+  options={[
+    {
+      cat: 'Group 1',
+      key: 'Option 1'
+    },
+    {
+      cat: 'Group 1',
+      key: 'Option 2'
+    },
+    {
+      cat: 'Group 1',
+      key: 'Option 3'
+    },
+    {
+      cat: 'Group 2',
+      key: 'Option 4'
+    },
+    {
+      cat: 'Group 2',
+      key: 'Option 5'
+    },
+    {
+      cat: 'Group 2',
+      key: 'Option 6'
+    },
+    {
+      cat: 'Group 2',
+      key: 'Option 7'
+    }
+  ]}
+/>
         </div>
     )
 }
 
-export default Select
+export default Select 
