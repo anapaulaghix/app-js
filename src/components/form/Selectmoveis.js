@@ -30,6 +30,14 @@ function Select(){
     {
       cat: 'Group 2',
       key: 'Guarda roupa'
+    },
+    {
+      cat: 'Group 2',
+      key: 'Mesa'
+    },
+    {
+      cat: 'Group 2',
+      key: 'Cadeira'
     }
   ]}
 />
