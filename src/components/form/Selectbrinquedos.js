@@ -1,48 +1,24 @@
-import Multiselect from "multiselect-react-dropdown"
+import React from 'react';
 
-function Select(){
-    return(
-        <div>
-            <Multiselect
-            placeholder="Selecione"
-  displayValue="key"
-  onKeyPressFn={function noRefCheck(){}}
-  onRemove={function noRefCheck(){}}
-  onSearch={function noRefCheck(){}}
-  onSelect={function noRefCheck(){}}
-  options={[
-    {
-      cat: 'Group 1',
-      key: 'Boneca'
-    },
-    {
-      cat: 'Group 1',
-      key: 'Carrinho'
-    },
-    {
-      cat: 'Group 1',
-      key: 'Animais de borracha'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Animais de pelúcia'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Materiais de desenho'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Pistas Hotwells'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Casa da Barbie'
-    }
-  ]}
-/>
-        </div>
-    )
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+const animatedComponents = makeAnimated();
+
+const options =[
+  { value: 'Boneca', label: 'Boneca' },
+  { value: 'Carrinho', label: 'Carrinho' },
+  { value: 'Animais de borracha' , label: 'Animais de borracha' },
+  { value: 'Animais de pelúcia' , label: 'Animais de pelúcia' },
+]
+
+export default function AnimatedMulti() {
+  return (
+    <Select
+      closeMenuOnSelect={false}
+      components={animatedComponents}
+      placeholder="Selecione..."
+      isMulti
+      options={options}
+    />
+  )
 }
-
-export default Select 
