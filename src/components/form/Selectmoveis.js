@@ -1,48 +1,27 @@
-import Multiselect from "multiselect-react-dropdown"
+import React from 'react';
 
-function Select(){
-    return(
-        <div>
-            <Multiselect
-            placeholder="Selecione"
-  displayValue="key"
-  onKeyPressFn={function noRefCheck(){}}
-  onRemove={function noRefCheck(){}}
-  onSearch={function noRefCheck(){}}
-  onSelect={function noRefCheck(){}}
-  options={[
-    {
-      cat: 'Group 1',
-      key: 'Cama'
-    },
-    {
-      cat: 'Group 1',
-      key: 'Sofá'
-    },
-    {
-      cat: 'Group 1',
-      key: 'Geladeira'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Armário'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Guarda roupa'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Mesa'
-    },
-    {
-      cat: 'Group 2',
-      key: 'Cadeira'
-    }
-  ]}
-/>
-        </div>
-    )
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+const animatedComponents = makeAnimated();
+
+const options =[
+  { value: 'Cama', label: 'Cama/colchão' },
+  { value: 'Sofá', label: 'Sofá' },
+  { value: 'Fio dental' , label: 'Fio dental' },
+  { value: 'Geladeira' , label: 'Geladeira' },
+  { value: 'Armário' , label: 'Armário' },
+  { value: 'Guarda roupa' , label: 'Guarda roupa' },
+  { value: 'Cadeira' , label: 'Cadeira' },
+]
+
+export default function AnimatedMulti() {
+  return (
+    <Select
+      closeMenuOnSelect={false}
+      components={animatedComponents}
+      placeholder="Selecione..."
+      isMulti
+      options={options}
+    />
+  )
 }
-
-export default Select 

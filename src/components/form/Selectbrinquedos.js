@@ -9,6 +9,8 @@ const options =[
   { value: 'Carrinho', label: 'Carrinho' },
   { value: 'Animais de borracha' , label: 'Animais de borracha' },
   { value: 'Animais de pelúcia' , label: 'Animais de pelúcia' },
+  { value: 'Barbie' , label: 'Casa da Barbie' },
+  { value: 'Pista' , label: 'Pista Hotwells' },
 ]
 
 export default function AnimatedMulti() {

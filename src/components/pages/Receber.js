@@ -14,6 +14,7 @@ function Receber(){
         <div className={styles.receber_container}>
             <h1>Escolha o que deseja</h1>
             <p>Você pode escolher as opções disponíveis doadas de cada categoria abaixo:</p>
+            <p><span>Somente algumas quantidades e tamanhos estarão disponíveis</span></p>
             <br></br>
         </div>
             <Container customClass='start'>

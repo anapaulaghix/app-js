@@ -7,3 +7,8 @@
 .doar_container h1{
     margin-bottom: 0.5em;
 }
+span{
+    color: rgb(228, 214, 214);
+    padding: 0 0.2em;
+    background-color: #222;
+}

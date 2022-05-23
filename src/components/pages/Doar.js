@@ -14,6 +14,7 @@ function Doar(){
         <div className={styles.doar_container}>
         <h1>Escolha por categorias</h1>
         <p>Só trabalhamos com o que está descrito em cada categoria, não aceitamos doações de outras coisas. Após escolher, clique no carrinho, e pronto! :)</p>
+        <p><span>As unidades, tamanhos, quantidades você escolherá na próxima página.</span></p>
         <br></br>
         </div>
         <Container customClass="start">

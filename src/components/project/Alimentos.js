@@ -7,8 +7,8 @@ function Alimentos(){
         <div className={styles.container}>
         <h1>Alimentos</h1>
         <img className={styles.img} src={img} alt='logocomida'></img>
-        <p>Escolha as opcões disponíveis:</p>
-        <Select className={styles.form_control}/>
+        <p>Escolha as opcões disponíveis (Pacotes de 1 a 10kg a unidade):</p>
+        <Select />
         </div>
     )
 }
