@@ -1,53 +1,57 @@
 import Faq from "react-faq-component";
 
 const data = {
-    title: "FAQ title",
     rows: [
         {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-              Fusce sed commodo purus, at tempus turpis.`,
+            title: "Como posso acompanhar meu pedido?",
+            content: `Assim que finalizar seu pedido será confirmado onde poderão ser retirados seus produtos, pedimos cerca de 3 dias para buscar.`,
         },
         {
-            title: "Nunc maximus, magna at ultricies elementum",
+            title: "Onde posso levar os produtos desejados para doar?",
             content:
-                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+                "Após escolher os produtos que serão doados aparecerá uma lista de locais onde ficam armazenados os produtos, será preciso apenas escolher o local mais próximo e levar.",
         },
         {
-            title: "Curabitur laoreet, mauris vel blandit fringilla",
-            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+            title: "Meu pedido virá embalado",
+            content: `Os alimentos irão na sua própria embalagem, as embalagens dos produtos como móves e roupas serão feitas de acordo com os doadores.`,
         },
         {
-            title: "What is the package version",
-            content: <p>current version is 1.2.1</p>,
+            title: "Os produtos são novos?",
+            content: `Os produtos são seminovos, nós garantimos uma boa qualidade.`,
+        },
+        {
+            title: "Os produtos que necessitam de montagem(móveis) acompanham manuais?",
+            content: `Infelizmente muitos doadores descartam os manuais, caso precisem de ajuda entre em contato conosco.`,
+        },
+        {
+            title: "Como sei que os produtos doados serão entregues?",
+            content: `Assim que os produtos chegarem ao local combinado, aparecerão na página para recebimentos e ficará lá até o momento que ele for selecionado.`,
+        },
+        {
+            title: "Ainda possui dúvidas?",
+            content: `Entrem em contato com as nossas redes sociais.`,
         },
     ],
 };
-
 const styles = {
-    bgColor: 'white',
-    titleTextColor: "blue",
-    rowTitleColor: "blue",
-    //rowContentColor: 'grey',
-    arrowColor: "black",
+    bgColor: 'dark pink',
+    rowTitleColor: "purple",
+    rowContentColor: 'white',
+    arrowColor: "purple",
+    //rowTitleTextSize: 'medium',
+    rowContentTextSize: "20px"
 };
 
 const config = {
-    //animate: true,
+    animate: true,
     //arrowIcon: "V",
-    //tabFocus: true
+    expandIcon: "+",
 };
 
 function Contact(){
-
     return (
         <div>
-            <h1>Dúvidas Frequentes</h1>
+            <h1>Duvidas Frequentes</h1>
             <Faq
                 data={data}
                 styles={styles}
