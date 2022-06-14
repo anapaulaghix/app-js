@@ -29,7 +29,6 @@ function App() {
           <Route path="/Receber" element={<Receber />} />
           <Route path="/Carrinho" element={<Carrinho />} />
           <Route path="/Formulario" element={<Formulario />} />
-
       </Routes>
       </Container>
       <Footer />
