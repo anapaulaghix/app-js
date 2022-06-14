@@ -12,6 +12,7 @@ const options =[
   { value: 'Desinfetante' , label: 'Desinfetante' },
   { value: 'Vassoura/rodo' , label: 'Vassoura/rodo' },
   { value: 'Água sanitária' , label: 'Água sanitária' },
+  { value: 'Perfume' , label: 'Perfume' },
 ]
 
 export default function AnimatedMulti() {

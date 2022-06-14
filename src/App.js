@@ -13,6 +13,7 @@ import Footer from './components/layout/Footer'
 import Doar from './components/pages/Doar'
 import Receber from './components/pages/Receber'
 import Carrinho from './components/pages/Carrinho'
+import Formulario from './components/pages/Formulario'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Doar" element={<Doar />} />
           <Route path="/Receber" element={<Receber />} />
           <Route path="/Carrinho" element={<Carrinho />} />
+          <Route path="/Formulario" element={<Formulario />} />
 
       </Routes>
       </Container>

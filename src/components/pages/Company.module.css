@@ -1,0 +1,38 @@
+.form-step{
+    text-align: center;
+}
+
+.field1 label, input, textarea{
+    display: block;
+    width: 100%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.field1 textarea{
+    height: 15vh;
+}
+
+.nextBtn{
+    display: inline-block;
+    width: 30%;
+    height: 2rem;
+    color: red;
+    border: 0;
+    bottom: 0;
+    cursor: pointer;
+    font-size: 20px;
+    position:absolute;
+    margin: 1rem 0 1rem 8rem;
+    margin-left: 52%;   
+    border-radius: 0 20px 20px 0; 
+
+}
+
+.nextBtn:hover{
+    background-color: rgb(245, 245, 78);
+    transition: 1s background ease;
+}

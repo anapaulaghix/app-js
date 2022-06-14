@@ -12,10 +12,13 @@ const options =[
   { value: 'Barbie' , label: 'Casa da Barbie' },
   { value: 'Pista' , label: 'Pista Hotwells' },
 ]
-
+const handleChange = (selectedOption) => {
+  console.log(`Option selected:`, selectedOption);
+}
 export default function AnimatedMulti() {
   return (
     <Select
+      onChange={handleChange}
       closeMenuOnSelect={false}
       components={animatedComponents}
       placeholder="Selecione..."
