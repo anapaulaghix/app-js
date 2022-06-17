@@ -15,7 +15,7 @@
     color:aliceblue;
 }
 .home_container p{
-    padding: 0.5em;
+    padding: 2px;
     font-size: 1em;
     margin-bottom: 3em;
     color:aliceblue;
@@ -26,4 +26,15 @@
     margin: 1% 0;
     padding-top: 2em;
     height: auto;
+}
+
+.home_container label{
+    font-size: 20px;
+    background-color: aliceblue;
+    width: 700px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: '5px',
 }

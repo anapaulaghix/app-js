@@ -11,7 +11,7 @@ const center = {
   lng: -38.523
 };
 
-function MyComponent() {
+function MyComponent(props) {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyAsKKQ3yAzh8LDLEfH07ViYf8KnhTWjB1U"
@@ -33,7 +33,7 @@ function MyComponent() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={10}
+        zoom={20}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >

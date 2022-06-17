@@ -5,7 +5,7 @@ function Carrinho(){
     const [formValues, setFormValues] = useState({
         senha:'',
         name:'',
-        endereco:'',
+        coordenadas: [0, 0]
     })
     
     console.log(formValues);
@@ -19,7 +19,8 @@ function Carrinho(){
         <p>Verficaremos se sua região está disponível</p>
         <input type="text" placeholder="Nome Completo" value={formValues.name} onChange={setFormValues}></input>
         <input type="password" placeholder="Senha" value={formValues.senha} onChange={setFormValues}></input>
-        <input type="text" placeholder="Endereço Completo" value={formValues.endereco} onChange={setFormValues}></input>
+        <p>Verfique se há contibuintes na região mais próxima e anote o endereço</p>
+        <p>Caso seja uma doação, aceitamos entregas pelo correio, anote o CEP</p>
         <CarrinhoMapa/>
         <input type="submit" placeholder="Enviar"></input>
         </div>

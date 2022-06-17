@@ -11,8 +11,11 @@ function Home(){
             <h1>Escolha sua opção</h1>
             <LinkButton to="/Doar" text="Quero Doar"></LinkButton>
             <LinkButton to="/Receber" text="Quero Receber"></LinkButton>
-            <p>Lembrando que você não terá contato com seu doador! Somos uma Instuição!</p> 
-            <p>Você deve levar sua doação ou buscar o que escolheu receber na instituição mais próxima de você.</p>
+            <label>INSTRUÇÕES DE COMO DOAR, RECEBER PRODUTOS E SE TORNAR CONTRIBUINTE!</label>
+            <label>1. DOAR: Caso queira doar um produto, clique em Quero Doar e em qual produto você deseja. Depois, crie uma conta e selecione o ponto do mapa no contribuinte mais próximo, leve até o local em pelo menos 1 semana..</label>
+            <label>2. RECEBER: Caso queira receber algum produto, clique em Quero Receber e em qual produto você deseja. Depois crie a conta e diremos se tal produto está doado ou ainda disponível. Caso esteja, busque no ponto do mapa mais próximo de você.</label>
+            <label>3. CONTRIBUINTE: Caso queira ser contribuinte, clique em Quem Somos e se registre para aceitar doações e buscas de produtos simultaneamente, te orientaremos depois, fique tranquilo. Tenha um espaço para receber as doações.</label>
+            <p>Lembrando que você não terá contato com seu doador, apenas com o contribuinte Solidariti! Somos uma Instuição!</p> 
             <p>Aceitamos alimentos, produtos, etc. Ajude como quiser. </p> 
         </section>
     )

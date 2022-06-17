@@ -1,9 +1,18 @@
 import './Company.module.css'
 import LinkButton from '../layout/LinkButton'
-import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
-const animatedComponents = makeAnimated();
+import CarrinhoMapa from './carrinhoMapa';
+import { useState } from "react"
+
+
 function Company(){
+    const [formValues, setFormValues] = useState({
+        senha:'',
+        name:'',
+        endereco:'',
+        email: '',
+        telefone: '',
+        coordenadas: [0, 0]
+    }) 
     return (
         <div className = "form-box">
             <h1>Quem Somos</h1>
@@ -18,24 +27,18 @@ function Company(){
         <form>
             <div className = "field1">
             <label> Preencha com seus dados </label>
-            <input placeholder="Nome Completo"/>        
-            <input placeholder="Telefone celular 000-000-0000"/>
-            <input placeholder="E-mail"/>
-            <textarea placeholder="Endereço Completo"/>
-            <label>Local fixo de quais regiões você receberá</label>
-            <Select
-      closeMenuOnSelect={false}
-      components={animatedComponents}
-      placeholder="Selecione o estado" 
-    />
-            <Select
-      closeMenuOnSelect={false}
-      components={animatedComponents}
-      placeholder="Selecione a cidade" 
-    />
+            <input placeholder="Nome Completo" value={formValues.name} onChange={setFormValues}/>  
+            <input type="password" placeholder="Senha" value={formValues.senha} onChange={setFormValues}></input>     
+            <input placeholder="Telefone celular 00-0000-0000" value={formValues.telefone} onChange={setFormValues}/>
+            <input placeholder="E-mail" value={formValues.email} onChange={setFormValues}/>
+            <textarea placeholder="Endereço Completo" value={formValues.endereco} onChange={setFormValues}/>
+            <label>Marque sua região no mapa
+            Assim os receptores e doadores saberão a sua localização
+            </label>
+            <CarrinhoMapa />
             </div>
         </form>
-        <LinkButton to="/Formulario"text="Próximo Passo"/>
+        <LinkButton to="/Formulario" text="Próximo Passo"/>
     </div>
     )
 }
