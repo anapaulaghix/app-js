@@ -35,10 +35,15 @@ function Company(){
             <label>Marque sua região no mapa
             Assim os receptores e doadores saberão a sua localização
             </label>
-            <CarrinhoMapa />
+            <CarrinhoMapa/>
             </div>
         </form>
         <LinkButton to="/Formulario" text="Próximo Passo"/>
+        <br></br>
+        <label>Já sou contribuinte</label>
+        <input placeholder="Email" value={formValues.email} onChange={setFormValues}/>  
+        <input type="password" placeholder="Senha" value={formValues.senha} onChange={setFormValues}></input>
+        <LinkButton to="/Formulario" text="Entrar"/>
     </div>
     )
 }

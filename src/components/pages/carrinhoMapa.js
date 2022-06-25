@@ -1,46 +1,101 @@
-import React from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import React, { useState, useEffect, useRef, useMemo, useContext } from 'react';
+import {
+  GoogleMap,
+  useLoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
+//import {Box} from '@chakra-ui/react'
+ import usePlacesAutocomplete, {
+  getGeocode,
+  getLatLng,
+} from "use-places-autocomplete";
+//import {
+// Combobox,
+ //ComboboxInput,
+// ComboboxPopover,
+// ComboboxList,
+// ComboboxOption,
+//} from "@reach/combobox";
 
-const containerStyle = {
-  width: '400px',
-  height: '400px'
-};
+//import "@reach/combobox/styles.css";
 
-const center = {
-  lat: -3.745,
-  lng: -38.523
-};
-
-function MyComponent(props) {
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyAsKKQ3yAzh8LDLEfH07ViYf8KnhTWjB1U"
-  })
-
-  const [map, setMap] = React.useState(null)
-
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-    setMap(map)
-  }, [])
-
-  const onUnmount = React.useCallback(function callback(map) {
-    setMap(null)
-  }, [])
-
-  return isLoaded ? (
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={20}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
-      </GoogleMap>
-  ) : <></>
+const libraries = ["places"]
+const mapContainerStyle = {
+    height: "60vh",
+    width: "100vh",
 }
+const center = {
+    lat: -22.751070,
+    lng: -47.333260,
+};
+const options = {
+    disableDefaultUI: true,
+    zoomControl: true,
+  };
 
-export default React.memo(MyComponent)
+export default function Mapa(){
+
+    const {isLoaded, loadError} = useLoadScript({
+        googleMapsApiKey: "AIzaSyAsKKQ3yAzh8LDLEfH07ViYf8KnhTWjB1U",
+        libraries,
+    });
+    const [markers, setMarkers] = React.useState([])
+    
+    const [selected, setSelected] = React.useState(null)
+    const mapRef = React.useRef();
+    const onMapLoad = React.useCallback((map) => {
+    mapRef.current = map;
+  }, []);
+
+    const onMapClick = React.useCallback((event) => {
+        setMarkers(current => [...current, {
+            lat: event.latLng.lat(),
+            lng: event.latLng.lng(),
+        }
+
+    ])
+    })
+
+    if (loadError) return "Error loading maps"
+    if (!isLoaded) return "Loading Maps"
+
+    return(
+        <div>
+            <GoogleMap
+            mapContainerStyle={mapContainerStyle}
+            zoom={8} 
+            center={center}
+            options={options}
+            onClick={onMapClick}
+            onLoad={onMapLoad}
+            >
+                {markers.map(marker => <Marker 
+                position={{
+                    lat: marker.lat, lng: marker.lng
+                }} 
+                icon={{
+                    origin: new window.google.maps.Point(0, 0),
+                    anchor: new window.google.maps.Point(15, 15),
+                    scaledSize: new window.google.maps.Size(30, 30),
+                }}
+                  onClick={() => {
+                    setSelected(marker);
+                  }}
+                />)}
+                {selected ? (<InfoWindow position={{lat: selected.lat, lng: selected.lng}} 
+                onCloseClick={() => {setSelected(null)
+                }}>
+                    <div>
+                        <h2>Novo Local</h2>
+                        <h3>Digite o número do estabelecimento</h3>
+                        <input type="number"></input>
+                        <h3>Adicione o CEP desse local</h3>
+                        <input type="number"></input>
+                        <button>Adicionar</button>
+                    </div>
+                </InfoWindow>) : null}
+            </GoogleMap>
+        </div>
+    )
+}

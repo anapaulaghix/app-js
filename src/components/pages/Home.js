@@ -4,7 +4,7 @@ import LinkButton from '../layout/LinkButton'
 
 function Home(){
     return (
-        <section className={styles.home_container}>
+        <div className={styles.home_container}>
             <img src={template} alt='template'></img>
             <p>O Solidariti quer espalhar nossa mensagem de esperança e compaixão. Acreditamos que uma única ação pode fazer a diferença na comunidade e que a ação coletiva pode impactar o mundo.
             "Bondade é a linguagem que os surdos conseguem ouvir e os cegos conseguem ver"</p>
@@ -16,9 +16,8 @@ function Home(){
             <label>2. RECEBER: Caso queira receber algum produto, clique em Quero Receber e em qual produto você deseja. Depois crie a conta e diremos se tal produto está doado ou ainda disponível. Caso esteja, busque no ponto do mapa mais próximo de você.</label>
             <label>3. CONTRIBUINTE: Caso queira ser contribuinte, clique em Quem Somos e se registre para aceitar doações e buscas de produtos simultaneamente, te orientaremos depois, fique tranquilo. Tenha um espaço para receber as doações.</label>
             <p>Lembrando que você não terá contato com seu doador, apenas com o contribuinte Solidariti! Somos uma Instuição!</p> 
-            <p>Aceitamos alimentos, produtos, etc. Ajude como quiser. </p> 
-        </section>
+            <p>Aceitamos alimentos, produtos, etc. Ajude como quiser. </p>
+           </div>
     )
 }
-
 export default Home
