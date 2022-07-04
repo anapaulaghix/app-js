@@ -37,7 +37,7 @@ const options = {
 export default function Mapa(){
 
     const {isLoaded, loadError} = useLoadScript({
-        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+        googleMapsApiKey: "AIzaSyBsI_coJGQgDX4QeALD8PN2MYv2Ir9UpBc",
         libraries,
     });
     const [markers, setMarkers] = React.useState([])
