@@ -4,14 +4,13 @@ import CarrinhoMapa from './carrinhoMapa';
 import { useState } from "react"
 
 
-function Company(){
+function Company(handleSubmit){
     const [formValues, setFormValues] = useState({
         senha:'',
         name:'',
         endereco:'',
         email: '',
         telefone: '',
-        coordenadas: [0, 0]
     }) 
     return (
         <div className = "form-box">

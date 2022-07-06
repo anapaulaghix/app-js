@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
@@ -19,13 +19,17 @@ const options =[
 ]
 
 export default function AnimatedMulti() {
+
   return (
+    <div>
     <Select
       closeMenuOnSelect={false}
       components={animatedComponents}
       placeholder="Selecione Pacotes..."
+      isSearchable={true}
       isMulti
       options={options}
     />
+    </div>
   )
 }

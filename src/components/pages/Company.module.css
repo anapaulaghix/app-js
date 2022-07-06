@@ -3,8 +3,9 @@
 }
 
 .field1 label, input, textarea{
+    text-align: center;
     display: block;
-    width: 100%;
+    width: 90%;
     padding: .5rem .8rem .5rem .8rem;
     margin: .9vw 0 ;
     border:0;
