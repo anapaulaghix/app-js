@@ -7,6 +7,7 @@ import Brinquedos from '../project/Brinquedos'
 import Moveis from '../project/Moveis'
 import Container from '../layout/Container'
 import LinkButton from  '../layout/LinkButton'
+import Pedido from '../project/Pedido'
 
 function Receber(){
     return(
@@ -24,7 +25,8 @@ function Receber(){
             <Brinquedos/>
             <Pets/>
             <Moveis/>
-            <LinkButton to="/Carrinho" text="Carrinho"/>
+            <Pedido />
+            <LinkButton to="/Carrinho" text="Concluir"/>
             </Container>
         </div>
     )

@@ -5,10 +5,6 @@ import {
   Marker
 } from "@react-google-maps/api";
 //import {Box} from '@chakra-ui/react'
- import usePlacesAutocomplete, {
-  getGeocode,
-  getLatLng,
-} from "use-places-autocomplete";
 //import {
 // Combobox,
  //ComboboxInput,
