@@ -6,6 +6,7 @@ const options = [
     { value: '1', label: 'Pouca Quantidade 1-5' },
     { value: '2', label: 'Média quantidade 5-10' },
     { value: '3' , label: 'Grande quantidade 10-20' },
+    { value: '4' , label: 'Enorme quantidade 20-50' },
   ]
 
 

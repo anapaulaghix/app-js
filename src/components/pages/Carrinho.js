@@ -3,10 +3,14 @@ import { useEffect, useState } from "react"
 import './Company.module.css'
 import Select from 'react-select'
 import Mapa from "./Mapa";
+import { Button, Alert } from 'react-bootstrap'
+
 
 function Carrinho(){
 
     const [formValues, setFormValues] = useState([])
+    const [show, setShow] = useState(true);
+
 
     return(
         <div>
@@ -21,7 +25,6 @@ function Carrinho(){
         <p>Verfique se há contibuintes na região mais próxima, anote o endereço e clique no ícone do lugar escolhido no mapa</p>
         <p>Aceitamos entregas e pedidos pelo correio, anote o CEP</p>
         <Mapa />
-        <input type="submit" className="nextBtn" value="Enviar" />
         </form>
         </div>
     )

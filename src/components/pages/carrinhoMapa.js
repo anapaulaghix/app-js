@@ -6,10 +6,10 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 //import {Box} from '@chakra-ui/react'
- import usePlacesAutocomplete, {
-  getGeocode,
-  getLatLng,
-} from "use-places-autocomplete";
+// import usePlacesAutocomplete, {
+//  getGeocode,
+//  getLatLng,
+//} from "use-places-autocomplete";
 //import {
 // Combobox,
  //ComboboxInput,
@@ -25,10 +25,11 @@ const mapContainerStyle = {
     height: "60vh",
     width: "100vh",
 }
-const center = {
+const center =  {
     lat: -22.751070,
     lng: -47.333260,
 };
+
 const options = {
     disableDefaultUI: true,
     zoomControl: true,

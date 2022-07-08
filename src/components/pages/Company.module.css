@@ -1,11 +1,11 @@
 .form-step{
-    text-align: center;
+    text-align: left;
 }
 
 .field1 label, input, textarea{
     text-align: center;
     display: block;
-    width: 70%;
+    width: 80%;
     padding: .5rem .8rem .5rem .8rem;
     margin: .9vw 0 ;
     border:0;
