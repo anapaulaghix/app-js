@@ -1,11 +1,11 @@
 import styles from './Home.module.css'
-import template from '../../img/template.png'
+import templatex from '../../img/templatex.png'
 import LinkButton from '../layout/LinkButton'
 
 function Home(){
     return (
         <div className={styles.home_container}>
-            <img src={template} alt='template'></img>
+            <img src={templatex} className='img-fluid' alt='template'></img>
             <p>O Solidariti quer espalhar nossa mensagem de esperança e compaixão. Acreditamos que uma única ação pode fazer a diferença na comunidade e que a ação coletiva pode impactar o mundo.
             "Bondade é a linguagem que os surdos conseguem ouvir e os cegos conseguem ver"</p>
             <h1>Escolha sua opção</h1>
