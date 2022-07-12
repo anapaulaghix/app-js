@@ -18,7 +18,7 @@ const options =[
   
 ]
 
-export default function AnimatedMulti() {
+export default function AnimatedMulti(props) {
 
   return (
     <div className={styles.container}>
@@ -31,7 +31,7 @@ export default function AnimatedMulti() {
       placeholder="Selecione Pacotes..."
       isSearchable={true}
       isMulti
-      options={options}
+      options={options.children}
     />
     </div>
   )

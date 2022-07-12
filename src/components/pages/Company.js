@@ -8,7 +8,6 @@ function Company(handleSubmit){
     const [formValues, setFormValues] = useState({
         senha:'',
         name:'',
-        endereco:'',
         email: '',
         telefone: '',
     }) 
@@ -30,14 +29,13 @@ function Company(handleSubmit){
             <input type="password" placeholder="Senha" value={formValues.senha} onChange={setFormValues}></input>     
             <input placeholder="Telefone celular 00-0000-0000" value={formValues.telefone} onChange={setFormValues}/>
             <input placeholder="E-mail" value={formValues.email} onChange={setFormValues}/>
-            <textarea placeholder="Endereço Completo" value={formValues.endereco} onChange={setFormValues}/>
-            <label>Marque sua região no mapa
+            <label>Marque sua região no mapa e preencha os dados
             Assim os receptores e doadores saberão a sua localização
             </label>
             <CarrinhoMapa/>
             </div>
         </form>
-        <LinkButton to="/Formulario" text="Próximo Passo"/>
+        <LinkButton to="/Formulario" text="Concluir"/>
         <br></br>
         <label>Já sou contribuinte</label>
         <input placeholder="Email" value={formValues.email} onChange={setFormValues}/>  
