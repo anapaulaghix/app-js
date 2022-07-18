@@ -1,5 +1,5 @@
 .btn {
-    background-color: transparent;
+    background-color: rgb(228, 214, 214);
     color: #222;
     border: 2px solid rgb(176, 22, 214);
     padding: 15px 32px;
@@ -8,8 +8,8 @@
     margin: 25px 25px 25px;
     display: inline-block;
     font-size: 24px;
-    border-radius: 4px;
-    width: 25%;
+    border-radius: 5px;
+    width: 20%;
     text-align: center;
   }
 

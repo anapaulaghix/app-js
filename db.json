@@ -1,0 +1,35 @@
+{
+    "clientes": [
+      {
+        "name": "Nome",
+        "category": {
+          "id": "1",
+          "name": "Nome"
+        },
+        "cost": 5000
+      },
+      {
+        "name": "Email",
+        "category": {
+          "id": "2",
+          "name": "Email"
+        },
+        "cost": 0,
+        "id": 2
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "Nome"
+      },
+      {
+        "id": 2,
+        "name": "Email"
+      },
+      {
+        "id": 3,
+        "name": "Senha"
+      }
+    ]
+  }
