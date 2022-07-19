@@ -31,7 +31,7 @@ export default function AnimatedMulti(props) {
       placeholder="Selecione Pacotes..."
       isSearchable={true}
       isMulti
-      options={options.children}
+      options={options}
     />
     </div>
   )
