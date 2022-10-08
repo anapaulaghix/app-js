@@ -1,35 +1,53 @@
-import styles from './Receber.module.css'
-import Alimentos from '../project/Alimentos'
-import Roupas from '../project/Roupas'
-import Higiene from '../project/Higiene'
-import Pets from '../project/Pets'
-import Brinquedos from '../project/Brinquedos'
-import Moveis from '../project/Moveis'
-import Container from '../layout/Container'
-import LinkButton from  '../layout/LinkButton'
-import Pedido from '../project/Pedido'
+import styles from './DoarReceber.module.css'
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import { Component, useEffect, useState } from 'react';
+import api from '../../context/api'
+import {AiOutlineSearch} from 'react-icons/ai'
+import clientMapa from '../mapas/clientMapa'
+import {Link} from 'react-router-dom';
 
-function Receber(){
+class Receber extends Component{
+
+  state = {
+    cadastros: [],
+  }
+
+  async componentDidMount(){
+    const response = await api.get('/cadastros');
+    console.log(response.data)
+    this.setState({cadastros: response.data})
+  }
+  render(){
+
+    const {cadastros} = this.state;
+
     return(
-        <div>
-        <div className={styles.receber_container}>
-            <h1>Escolha o que deseja</h1>
-            <p>Você pode escolher as opções disponíveis doadas de cada categoria abaixo:</p>
-            <p><span>Somente algumas quantidades e tamanhos estarão disponíveis</span></p>
+      <div>
+        <h1>Lista de Contribuintes</h1>
+        <label>busque por sua regiao</label>
+      {cadastros.map(cadastro => (
+        <Container>
+          <Row>
+         <Card>
+          <Card.Header key={cadastro._id}>
+            <li style={{listStyleType: "none"}}>Nome: {cadastro.name}</li>
+            <li>Email: {cadastro.email}</li>
+            <li>Cidade: {cadastro.cidade}</li>
+            <li>Endereço: {cadastro.local}</li>
+            </Card.Header>
+            <Card.Footer>
+            </Card.Footer>
             <br></br>
-        </div>
-            <Container customClass='start'>
-            <Alimentos />
-            <Roupas/>
-            <Higiene/>
-            <Brinquedos/>
-            <Pets/>
-            <Moveis/>
-            <Pedido />
-            <LinkButton to="/Carrinho" text="Concluir"/>
+            </Card>
+            <br></br>
+            </Row>
+            <br></br>
             </Container>
+        ))}
         </div>
     )
+  }
 }
-
 export default Receber

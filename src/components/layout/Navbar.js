@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom'
 import Container from './Container'
 import styles from './Navbar.module.css'
 import logo from '../../img/logoicon.png'
+import {BiShoppingBag} from 'react-icons/bi'
 
 function Navbar(){
     return(

@@ -5,7 +5,6 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import './carrinhoMapa.css'
 import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,

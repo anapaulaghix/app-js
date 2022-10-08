@@ -1,8 +1,8 @@
-.form-step{
+.form_step{
     text-align: left;
 }
 
-.field1 label, input, textarea{
+.field1 label, input, textarea, select{
     text-align: center;
     display: block;
     width: 80%;
@@ -11,29 +11,26 @@
     border:0;
     border-radius: 5px;
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .field1 textarea{
     height: 15vh;
 }
 
-.nextBtn{
-    display: inline-block;
-    width: 30%;
-    height: 2rem;
-    color: red;
-    border: 0;
-    bottom: 0;
-    cursor: pointer;
+.field1 button{
+    background-color: rgb(110, 33, 129);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: -ms-flexbox;
     font-size: 20px;
-    position:absolute;
-    margin: 1rem 0 1rem 8rem;
-    margin-left: 52%;   
-    border-radius: 0 20px 20px 0; 
-
+    margin-top: 20px;
 }
 
-.nextBtn:hover{
-    background-color: rgb(245, 245, 78);
-    transition: 1s background ease;
+.field1 h3, p{
+    text-align: left;
 }
