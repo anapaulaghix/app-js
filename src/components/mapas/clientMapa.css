@@ -13,3 +13,9 @@
     font-size: 1.5rem;
     width: 100%;
   }
+
+  .mapa{
+    align-items: left;
+    display: left;
+    position: relative;
+  }

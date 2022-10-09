@@ -1,7 +1,3 @@
-.form_step{
-    text-align: left;
-}
-
 .field1 label, input, textarea, select{
     text-align: center;
     display: block;
@@ -14,38 +10,25 @@
     margin-bottom: 5px;
 }
 
-.field1 textarea{
-    height: 15vh;
-}
-
-<<<<<<< HEAD
 .field1 button{
-    background-color: rgb(110, 33, 129);
-=======
-.button{
     background-color: #a24aaa;
->>>>>>> eb981f2d3a475d4087e4ecee6b62a9a061123b79
     border: none;
     border-radius: 12px;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-<<<<<<< HEAD
     display: -ms-flexbox;
     font-size: 20px;
     margin-top: 20px;
 }
 
 .field1 h3, p{
-    text-align: left;
-}
-=======
+    text-align: center;
     display: inline-block;
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 250px;
+    background-color: aliceblue;
+    border-radius: 10px;
 }
-
->>>>>>> eb981f2d3a475d4087e4ecee6b62a9a061123b79

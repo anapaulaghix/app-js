@@ -4,6 +4,7 @@ import {
   useLoadScript,
   Marker
 } from "@react-google-maps/api";
+import "./clientMapa.css"
 //import {Box} from '@chakra-ui/react'
 //import {
 // Combobox,
@@ -47,6 +48,7 @@ export default function Mapa(){
     return(
         <div>
             <GoogleMap
+            className="mapa"
             mapContainerStyle={mapContainerStyle}
             zoom={8} 
             center={center}

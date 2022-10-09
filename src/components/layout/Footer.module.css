@@ -4,6 +4,13 @@
     padding: 1.4em;
     text-align: center;
   }
+
+  .footer p{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+  }
   
   .social_list {
     display: flex;
@@ -24,10 +31,3 @@
     cursor: pointer;
   }
   
-  .copy_right {
-    margin-top: 2em;
-  }
-  
-  .copy_right span {
-    font-weight: bold;
-  }

@@ -1,8 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../context/useAuth";
 import { useState, useEffect, createContext } from "react";
-import Receber from './Receber'
-import axios from "axios";
 
 const Signup = () => {
   const [email, setEmail] = useState("");

@@ -2,35 +2,77 @@ import styles from './DoarReceber.module.css'
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { Component, useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
 import api from '../../context/api'
-import {AiOutlineSearch} from 'react-icons/ai'
-import clientMapa from '../mapas/clientMapa'
+import CarrinhoMapa from '../mapas/CarrinhoMapa'
 import {Link} from 'react-router-dom';
 
-class Receber extends Component{
+ function Receber(){
 
-  state = {
-    cadastros: [],
+  const[cadastros, setCadastros] = useState([])
+  const[busca, setBusca] = useState('')
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [searchParam] = useState(["local", "name", "cidade"]);
+  const [filterParam, setFilterParam] = useState(["All"]);
+
+    useEffect(() => {
+      api.get("cadastros").then(({data}) => {
+        setCadastros(data)
+     }).then((res) => res.json())
+     .then(
+      (result) => {
+          setIsLoaded(true);
+          setCadastros(result);
+      },
+      (error) => {
+          setIsLoaded(true);
+          setError(error);
+      }
+  );
+    console.log(cadastros)
+    }, [])
+
+    const data = Object.values(cadastros);
+
+    function search(cadastros) {
+      return cadastros.filter((cadastro) => {
+          if (cadastro.cidade == filterParam) {
+              return searchParam.some((newCadastro => {
+                  return (
+                      cadastro[newCadastro]
+                          .toString()
+                          .toLowerCase()
+                          .indexOf(busca.toLowerCase()) > -1
+                      );
+                }));
+          } else if (filterParam == "All") {
+              return searchParam.some((newCadastro) => {
+                  return (
+                      cadastro[newCadastro]
+                          .toString()
+                          .toLowerCase()
+                          .indexOf(busca.toLowerCase()) > -1
+                  );
+              });
+          }
+      });
   }
 
-  async componentDidMount(){
-    const response = await api.get('/cadastros');
-    console.log(response.data)
-    this.setState({cadastros: response.data})
-  }
-  render(){
-
-    const {cadastros} = this.state;
-
-    return(
+   return(
       <div>
         <h1>Lista de Contribuintes</h1>
-        <label>busque por sua regiao</label>
-      {cadastros.map(cadastro => (
-        <Container>
-          <Row>
-         <Card>
+        <label>Digite sua região e pesquise</label>
+        <input type="text" placeholder='Pesquise...' className={styles.search}
+        value={busca}
+        onChange={e =>  setBusca(e.target.value)}>
+        </input>
+        <CarrinhoMapa/>
+      {search(data).map(cadastro => (
+        <div>
+          <Container>
+            <Row>
+         <Card> 
           <Card.Header key={cadastro._id}>
             <li style={{listStyleType: "none"}}>Nome: {cadastro.name}</li>
             <li>Email: {cadastro.email}</li>
@@ -45,9 +87,9 @@ class Receber extends Component{
             </Row>
             <br></br>
             </Container>
+            </div>
         ))}
         </div>
     )
   }
-}
 export default Receber

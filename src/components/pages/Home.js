@@ -3,11 +3,12 @@ import templatex from '../../img/templatex.png'
 import LinkButton from '../layout/LinkButton'
 import React from 'react'
 import { Parallax } from 'react-parallax';
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 function Home(){
     return (
         <div className={styles.home_container}>
-           <img src={templatex} alt='template'></img>
+           <img alt='template' src={templatex}></img>
            <br/>
            <b> O Solidariti quer espalhar nossa mensagem de esperança e compaixão. Acreditamos que uma única ação pode fazer a diferença na comunidade e que a ação coletiva pode impactar o mundo.
             "Bondade é a linguagem que os surdos conseguem ouvir e os cegos conseguem ver"
@@ -27,6 +28,7 @@ function Home(){
             <p>Lembrando que você não terá contato com seu doador, apenas com o contribuinte Solidariti! Somos uma Instuição!</p> 
             <p>Aceitamos alimentos, produtos, etc. Ajude como quiser. </p>
             <p>Abaixo está nosso pix para doar e nosso email para nos contatar.</p>
+            <br></br>
            </div>
     )
 }
