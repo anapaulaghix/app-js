@@ -62,7 +62,12 @@ function Carrinho(){
         placeholder="Email ou informação sobre de quem doou" 
         onChange={handleChangeValues}/> 
 
-        <input type="number" name="quant" placeholder="Quantidade de produtos"></input>
+       <input type="text" name="senha"
+        placeholder="Descricao do produto" 
+        onChange={handleChangeValues}/> 
+
+        <input type="number" name="quant" placeholder="Quantidade de produtos" 
+        onChange={handleChangeValues}></input>
         
        <button className={styles.form_step} onClick={() => handleClickButton() }>Enviar</button>
         </form>

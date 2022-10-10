@@ -6,30 +6,26 @@ import {BiEdit} from 'react-icons/bi'
 
 function Doadores(props){
     const [open, setOpen] = React.useState(false);
-
-    const HandleDeleteValues = () => {
-        setOpen(true);
+    const handleClick = () => {
+        setOpen(true)
     }
-   
-    const HandleEditValues = () => {
-        setOpen(true);
-    }
-
 
     return (
         <>
-        <FormDialog open={open} setOpen={setOpen} senha={props.senha} name={props.name} email={props.email}
-        id={props.iddoadores} produtos={props.produtos} quant={props.quant}/>
+        <FormDialog open={open} setOpen={setOpen} 
+        senha={props.senha} name={props.name} email={props.email}
+        id={props.iddoadores} quant={props.quant} listClient={props.listClient}
+        setListClient={props.setListClient}/>
         <div className={styles.container}>
             <h3 className={styles.title}>Pedido Realizado!</h3> 
             <ul className={styles.social_list}>
-                <li><BiEdit onClick={() => HandleEditValues()}/></li>
-                <li><MdDelete onClick={() => HandleDeleteValues()}/></li>
+                <li><BiEdit onClick={() => {handleClick()}}/></li>
+                <li><MdDelete onClick={() => {handleClick()}}/></li>
             </ul>
             <p className={styles.name}>Nome: {props.name}</p>
+            <p className={styles.name}>Email: {props.email}</p>
             <p className={styles.senha}>Senha: {props.senha}</p>
             <p className={styles.p}>Quantidade: {props.quant}</p>
-            <p>Produtos:</p>
         </div>
         </>
     )
