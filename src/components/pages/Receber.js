@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import {useEffect, useState } from 'react';
-import api from '../../context/api'
+import api from '../services/api'
 import CarrinhoMapa from '../mapas/CarrinhoMapa'
 import {Link} from 'react-router-dom';
 

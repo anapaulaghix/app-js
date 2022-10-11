@@ -1,4 +1,4 @@
-.field1 label, input, textarea, select{
+.field1 h3, label, input, textarea, select{
     text-align: center;
     display: block;
     width: 80%;
@@ -23,7 +23,7 @@
     margin-top: 20px;
 }
 
-.field1 h3, p{
+.field1 p{
     text-align: center;
     display: inline-block;
     font-size: 20px;

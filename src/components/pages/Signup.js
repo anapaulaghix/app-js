@@ -1,10 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../context/useAuth";
-import { useState, useEffect, createContext } from "react";
+import { useState } from "react";
+import styles from'./Company.module.css'
+import Alert from '@mui/material/Alert';
 
 const Signup = () => {
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("");
-  const [emailConf, setEmailConf] = useState("");
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -13,11 +15,8 @@ const Signup = () => {
   const { signup } = useAuth();
 
   const handleSignup = () => {
-    if (!email | !emailConf | !senha) {
+    if (!name |!email | !senha) {
       setError("Preencha todos os campos");
-      return;
-    } else if (email !== emailConf) {
-      setError("Os e-mails não são iguais");
       return;
     }
     
@@ -27,28 +26,28 @@ const Signup = () => {
       return;
     }
 
-    alert("Usuário cadatrado com sucesso!");
+    alert("Usuário cadastrado com sucesso!")
     navigate("/Company");
   };
   return (
-    <div>
+    <div className={styles.field1}>
      <h1>Cadastre seus dados</h1>
+     <label>Preencha com seus dados básicos para salvar seu endereço depois, caso queira</label>
      <form>
+     <input
+          type="text"
+          placeholder="Digite seu Nome Completo"
+          value={name}
+          onChange={(e) => [setName(e.target.value)]}/>
         <input
           type="email"
           placeholder="Digite seu E-mail"
           value={email}
-          onChange={(e) => [setEmail(e.target.value), setError("")]}/>
-      <input type="email"
-      placeholder="Confirme seu E-mail"
-      value={emailConf}
-      onChange={(e) => [setEmailConf(e.target.value), setError("")]}/>
-      
-      <input type="password"
-      placeholder="Digite sua Senha"
-      value={senha}
-      onChange={(e) => [setSenha(e.target.value), setError("")]}
-     />
+          onChange={(e) => [setEmail(e.target.value)]}/>
+         <input type="password"
+         placeholder="Digite sua Senha"
+         value={senha}
+         onChange={(e) => [setSenha(e.target.value)]}/>
 
         <label>{error}</label>
         <button onClick={handleSignup}>Cadastrar</button> 

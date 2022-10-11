@@ -1,5 +1,6 @@
 import styles from './Home.module.css'
 import templatex from '../../img/templatex.png'
+import templatefooter from '../../img/templatefooter.png'
 import LinkButton from '../layout/LinkButton'
 import React from 'react'
 import { Parallax } from 'react-parallax';
@@ -25,9 +26,7 @@ function Home(){
             <LinkButton to="/Doar" text="Quero Doar"></LinkButton>
             <LinkButton to="/Receber" text="Quero Solicitar"></LinkButton>
             <LinkButton to="Company" text="Quero ser ajudante"></LinkButton>
-            <p>Lembrando que você não terá contato com seu doador, apenas com o contribuinte Solidariti! Somos uma Instuição!</p> 
-            <p>Aceitamos alimentos, produtos, etc. Ajude como quiser. </p>
-            <p>Abaixo está nosso pix para doar e nosso email para nos contatar.</p>
+            <img src={templatefooter}></img>
             <br></br>
            </div>
     )

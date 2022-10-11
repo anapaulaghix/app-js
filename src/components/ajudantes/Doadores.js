@@ -22,10 +22,10 @@ function Doadores(props){
                 <li><BiEdit onClick={() => {handleClick()}}/></li>
                 <li><MdDelete onClick={() => {handleClick()}}/></li>
             </ul>
-            <p className={styles.name}>Nome: {props.name}</p>
-            <p className={styles.name}>Email: {props.email}</p>
-            <p className={styles.senha}>Senha: {props.senha}</p>
-            <p className={styles.p}>Quantidade: {props.quant}</p>
+            <p>Nome: {props.name}</p>
+            <p>Email: {props.email}</p>
+            <p>Senha: {props.senha}</p>
+            <p>Quantidade: {props.quant}</p>
         </div>
         </>
     )

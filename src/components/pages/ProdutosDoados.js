@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import styles from './Company.module.css'
+import Doadores from '../ajudantes/Doadores'
 import Axios from "axios"
 
 function ProdutosDoados(){
@@ -57,6 +58,16 @@ function ProdutosDoados(){
         
        <button className={styles.form_step} onClick={() => handleClickButton() }>Enviar</button>
         </form>
+        {typeof listClient != "undefined" &&
+        listClient.map((value) => (
+       <Doadores key={value.id} 
+            listClient={listClient} 
+            setListClient={setListClient}
+            id={value.idprodutos}
+            name={value.name}
+            category={value.category}
+            />
+        ))}
         </div>
     )
 }

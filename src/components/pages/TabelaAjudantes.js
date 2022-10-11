@@ -22,7 +22,7 @@ function Formulario(){
         <CarrinhoReceber/>
         <br></br>
         <h1>Passo 2:</h1>
-        <CarrinhoDoar/>
+       <CarrinhoDoar/>
         </div>
     )
 }

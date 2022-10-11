@@ -1,4 +1,4 @@
-import AuthProvider from './context/Auth'
+import {AuthProvider} from './context/Auth'
 import Routes from './Routes'
 
 
