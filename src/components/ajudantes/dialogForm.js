@@ -11,15 +11,16 @@ import axios from "axios"
 export default function FormDialog(props) {
 
   const[editValues, seteditvalues] = useState({
-    id: props.id,
+    iddoadores: props.iddoadores,
     name: props.name,
     email: props.email,
     senha:props.senha,
+    quant: props.quant,
   })
 
   const handleEdit = () => {
      axios.put("http://localhost:3001/edit", {
-      id: editValues.id,
+      iddoadores: editValues.iddoadores,
       name: editValues.name, 
       email: editValues.email,
       senha: editValues.senha,
@@ -27,9 +28,9 @@ export default function FormDialog(props) {
      }).then(() => {
       props.setListClient(
         props.listClient.map((value) => {
-          return value.id == editValues.id
+          return value.iddoadores == editValues.iddoadores
             ? {
-                id: editValues.id,
+                iddoadores: editValues.iddoadores,
                 name: editValues.name,
                 email: editValues.email,
                 senha: editValues.senha,
@@ -47,7 +48,7 @@ export default function FormDialog(props) {
      axios.delete(`http://localhost:3001/delete/${editValues.id}`).then(() => {
       props.setListClient(
         props.listClient.filter((value) => {
-          return value.id != editValues.id;
+          return value.iddoadores != editValues.iddoadores;
         })
       );
     });
@@ -61,7 +62,7 @@ export default function FormDialog(props) {
   const handleChangeValues = value => {
     seteditvalues(prevValues => ({
       ...prevValues,
-      [value.target.id] : value.target.value
+      [value.target.iddoadores] : value.target.value
     }))
   }
 

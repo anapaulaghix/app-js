@@ -13,10 +13,15 @@ function Doadores(props){
     return (
         <>
         <FormDialog open={open} setOpen={setOpen} 
-        senha={props.senha} name={props.name} email={props.email}
-        id={props.iddoadores} quant={props.quant} listClient={props.listClient}
-        setListClient={props.setListClient}/>
-        <div className={styles.container}>
+         name={props.name} 
+         email={props.email}
+         senha={props.senha}
+         quant={props.quant}
+         id={props.iddoadores} 
+         listClient={props.listClient}
+         setListClient={props.setListClient}/>
+        <
+            div className={styles.container}>
             <h3 className={styles.title}>Pedido Realizado!</h3> 
             <ul className={styles.social_list}>
                 <li><BiEdit onClick={() => {handleClick()}}/></li>
