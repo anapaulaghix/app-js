@@ -85,7 +85,7 @@ function Carrinho(){
           setListClient={setListClient}
           key={val.id}
           id={val.id}
-          produto={val.produtos}
+          produtos={val.produtos}
           doador={val.doador}
           categoria={val.categoria}
           quant={val.quant}

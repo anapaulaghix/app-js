@@ -7,7 +7,6 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import axios from "axios"
-import produce from "immer";
 
 export default function FormDialog(props) {
 
@@ -126,7 +125,7 @@ export default function FormDialog(props) {
             autoFocus
             margin="dense"
             id="quant"
-            label="Quantidade"
+            label="Data"
             defaultValue={props.data_}
             onChange={handleChangeValues}
             type="quant"

@@ -14,7 +14,7 @@ function Doadores(props){
         <>
         <FormDialog open={open} setOpen={setOpen} 
         id={props.id}
-        produto={props.produtos}
+        produtos={props.produtos}
         doador={props.doador}
         categoria={props.categoria}
         quant={props.quant}

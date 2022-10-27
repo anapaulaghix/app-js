@@ -16,7 +16,6 @@ function Formulario(){
         <p>Esteja sempre atento na localização que você inserir, os doadores podem doar a qualquer horário do dia</p>
         <img src={solidariti} alt='solidariti'></img>
         <button onClick={() => [signout(), navigate("/")]}>Sair</button>
-        <button>Excluir conta e parar de ser contribuinte :(</button>
         <br></br>
         <h1>Passo 1: (Cuidado com esse passo!)</h1>
         <CarrinhoReceber/>
