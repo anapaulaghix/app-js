@@ -6,6 +6,7 @@ import Doadores from '../ajudantes/Doadores'
 function Carrinho(){
     const [listClient, setListClient] = useState();
     const [values, setvalues] = useState();
+    console.log(listClient);
     
     const handleChangeValues = (value) => {
         setvalues((prevvalue) => ({
@@ -15,25 +16,28 @@ function Carrinho(){
     }
     const handleClickButton = () => {
         Axios.post("http://localhost:3001/register", {
-            name: values.name,
-            email: values.email,
-            senha: values.senha,
+            produtos: values.produtos,
+            doador: values.doador,
+            categoria: values.categoria,
             quant: values.quant,
+            data_: values.data_,
         }).then(() => {
             Axios.post("http://localhost:3001/search", {
-                name: values.name,
-                email: values.email,
-                senha: values.senha,
-                quant: values.quant,
+              produtos: values.produtos,
+              doador: values.doador,
+              categoria: values.categoria,
+              quant: values.quant,
+              data_: values.data_,
             }).then((response) => {
                 setListClient([
                     ...listClient,
                     {
                         id: response.data[0].id,
-                        name: values.name,
-                        email: values.email,
-                        senha: values.senha,
+                        produtos: values.produtos,
+                        doador: values.doador,
+                        categoria: values.categoria,
                         quant: values.quant,
+                       data_: values.data_,
                     }
                 ])
             })
@@ -48,41 +52,47 @@ function Carrinho(){
 
     return(
         <div className={styles.field1}>
-        <form>
+        <div>
         <h3>Controle de doações</h3>
         <label>Digite aqui o nome da pessoa, se foi doação ou solicitação e qual foi o produto</label>
         <label>Disponível apenas para você</label>
         <br></br>
         <input type="text" 
-        name="name"
-        placeholder="Nome Completo" 
+        name="produtos"
+        placeholder="Nome do Produto" 
         onChange={handleChangeValues}></input>
         
-        <input type="text" name="email"
+        <input type="text" name="doador"
         placeholder="Email ou informação sobre de quem doou" 
         onChange={handleChangeValues}/> 
 
-       <input type="text" name="senha"
+       <input type="text" name="categoria"
         placeholder="Descricao do produto" 
         onChange={handleChangeValues}/> 
 
         <input type="number" name="quant" placeholder="Quantidade de produtos" 
         onChange={handleChangeValues}></input>
+
+        <input type="date" name="data_" placeholder="Data da doação" 
+        onChange={handleChangeValues}></input>
         
        <button className={styles.form_step} onClick={() => handleClickButton() }>Enviar</button>
-        </form>
-        {typeof listClient != "undefined" &&
-        listClient.map((value) => (
-       <Doadores key={value.id} 
-            listClient={listClient} 
-            setListClient={setListClient}
-            id={value.iddoadores}
-            name={value.name}
-            email={value.email}
-            senha={value.senha}
-            quant={value.quant}
-            />
-        ))}
+        </div>
+
+        {listClient?.map((val) => (
+        <Doadores
+          listClient={listClient}
+          setListClient={setListClient}
+          key={val.id}
+          id={val.id}
+          produto={val.produtos}
+          doador={val.doador}
+          categoria={val.categoria}
+          quant={val.quant}
+          data_={val.data_}
+        />
+      ))}
+
         </div>
     )
 }

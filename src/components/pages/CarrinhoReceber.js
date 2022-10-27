@@ -65,7 +65,7 @@ function CarrinhoReceber(){
         onChange={handleChangeValues}/> 
 
        <input type="text" name="local"
-        placeholder="Seu endereço" 
+        placeholder="Seu endereço, CEP ou CNPJ" 
         onChange={handleChangeValues}/> 
         
        <button className={styles.form_step} onClick={() => handleClickButton() }>Enviar</button>

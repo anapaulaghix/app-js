@@ -7,64 +7,67 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import axios from "axios"
+import produce from "immer";
 
 export default function FormDialog(props) {
 
-  const[editValues, seteditvalues] = useState({
-    iddoadores: props.iddoadores,
-    name: props.name,
-    email: props.email,
-    senha:props.senha,
+  const[editValues, setEditvalues] = useState({
+    id: props.id,
+    produtos: props.produtos,
+    doador: props.doador,
+    categoria:props.categoria,
     quant: props.quant,
+    data_: props.data_,
   })
 
+  const handleChangeValues = (values) => {
+    setEditvalues(prevValues => ({
+      ...prevValues,
+      [values.target.id] : values.target.value
+    }))
+  }
+
   const handleEdit = () => {
-     axios.put("http://localhost:3001/edit", {
-      iddoadores: editValues.iddoadores,
-      name: editValues.name, 
-      email: editValues.email,
-      senha: editValues.senha,
+    axios.put("http://localhost:3001/edit", {
+      id: editValues.id,
+      produtos: editValues.produtos,
+      doador: editValues.doador,
+      categoria: editValues.categoria,
       quant: editValues.quant,
-     }).then(() => {
+      data_: editValues.data_,
+    }).then(() => {
       props.setListClient(
         props.listClient.map((value) => {
-          return value.iddoadores == editValues.iddoadores
+          return value.id == editValues.id
             ? {
-                iddoadores: editValues.iddoadores,
-                name: editValues.name,
-                email: editValues.email,
-                senha: editValues.senha,
-                quant: editValues.quant,
+              id: editValues.id,
+              produtos: editValues.produtos,
+              doador: editValues.doador,
+              categoria: editValues.categoria,
+              quant: editValues.quant,
+              data_: editValues.data_,
               }
             : value;
         })
       );
     });
-     handleClose()
-     console.log(editValues)
-  }
+    handleClose();
+  };
 
   const handleDelete = () => {
      axios.delete(`http://localhost:3001/delete/${editValues.id}`).then(() => {
-      props.setListClient(
-        props.listClient.filter((value) => {
-          return value.iddoadores != editValues.iddoadores;
-        })
-      );
-    });
+     props.setListClient(
+      props.listClient.filter((value) => {
+        return value.id != editValues.id;
+      })
+    );
+  });
      handleClose()
   }
 
   const handleClose = () => {
     props.setOpen(false);
   };
-
-  const handleChangeValues = value => {
-    seteditvalues(prevValues => ({
-      ...prevValues,
-      [value.target.iddoadores] : value.target.value
-    }))
-  }
 
   return (
     <div>
@@ -74,23 +77,24 @@ export default function FormDialog(props) {
           <DialogContentText>
            Edite o produto mostrado caso haja erros ou exclua
           </DialogContentText>
+          <DialogContent>
           <TextField
             autoFocus
             margin="dense"
             id="name"
             label="Nome do Produto"
-            defaultValue={props.name}
+            defaultValue={props.produtos}
             onChange={handleChangeValues}
-            type="email"
+            type="name"
             fullWidth
             variant="standard"
           />
           <TextField
             autoFocus
             margin="dense"
-            id="name"
+            id="email"
             label="Email ou informacao do doador"
-            defaultValue={props.email}
+            defaultValue={props.doador}
             onChange={handleChangeValues}
             type="email"
             fullWidth
@@ -99,31 +103,43 @@ export default function FormDialog(props) {
           <TextField
             autoFocus
             margin="dense"
-            id="name"
-            label="Senha"
-            defaultValue={props.senha}
+            id="senha"
+            label="Categoria do produto"
+            defaultValue={props.categoria}
             onChange={handleChangeValues}
-            type="email"
+            type="senha"
             fullWidth
             variant="standard"
           />
           <TextField
             autoFocus
             margin="dense"
-            id="name"
+            id="quant"
             label="Quantidade"
             defaultValue={props.quant}
             onChange={handleChangeValues}
-            type="email"
+            type="quant"
+            fullWidth
+            variant="standard"
+          />
+          <TextField
+            autoFocus
+            margin="dense"
+            id="quant"
+            label="Quantidade"
+            defaultValue={props.data_}
+            onChange={handleChangeValues}
+            type="quant"
             fullWidth
             variant="standard"
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={() => handleClose()}>Cancel</Button>
           <Button onClick={() => handleEdit()}>Salvar</Button>
           <Button onClick={() => handleDelete()}>Excluir</Button>
         </DialogActions>
+        </DialogContent>
       </Dialog>
     </div>
   );

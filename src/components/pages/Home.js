@@ -3,8 +3,6 @@ import templatex from '../../img/templatex.png'
 import templatefooter from '../../img/templatefooter.png'
 import LinkButton from '../layout/LinkButton'
 import React from 'react'
-import { Parallax } from 'react-parallax';
-import { ParallaxBanner } from 'react-scroll-parallax';
 
 function Home(){
     return (
@@ -19,14 +17,14 @@ function Home(){
             <b>Abaixo está as instruções de como usar o nosso mercado solidário</b>
             <label>INSTRUÇÕES DE COMO DOAR, RECEBER PRODUTOS E SE TORNAR CONTRIBUINTE!</label>
             <label>1. DOAR: Caso queira doar um produto, clique em Quero Doar e em qual produto você deseja. Depois, crie uma conta e selecione o ponto do mapa no contribuinte mais próximo, leve até o local em pelo menos 1 semana..</label>
-            <label>2. RECEBER: Caso queira receber algum produto, clique em Quero Solicitar e em qual produto você deseja. Depois crie a conta e diremos se tal produto está doado ou ainda disponível. Caso esteja, busque no ponto do mapa mais próximo de você.</label>
-            <label>3. CONTRIBUINTE: Caso queira ser contribuinte, clique em Quero ser ajudante e se registre para aceitar doações e buscas de produtos simultaneamente, te orientaremos depois, fique tranquilo. Tenha um espaço físico para receber as doações.</label>
+            <label>2. AJUDANTES: Caso queira receber algum produto, clique em Quero Solicitar e em qual produto você deseja. Depois crie a conta e diremos se tal produto está doado ou ainda disponível. Caso esteja, busque no ponto do mapa mais próximo de você.</label>
+            <label>3. QUERO SER CONTRIBUINTE: Caso queira ser contribuinte, clique em Quero ser ajudante e se registre para aceitar doações e buscas de produtos simultaneamente, te orientaremos depois, fique tranquilo. Tenha um espaço físico para receber as doações.</label>
             </section>
             <h1>Escolha sua opção</h1>
-            <LinkButton to="/Doar" text="Quero Doar"></LinkButton>
-            <LinkButton to="/Receber" text="Quero Solicitar"></LinkButton>
+            <LinkButton to="/Doar" text="Quero doar"></LinkButton>
+            <LinkButton to="/Receber" text="Ajudantes"></LinkButton>
             <LinkButton to="Company" text="Quero ser ajudante"></LinkButton>
-            <img src={templatefooter}></img>
+            <img src={templatefooter} alt="footer"></img>
             <br></br>
            </div>
     )
