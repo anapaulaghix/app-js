@@ -50,7 +50,7 @@ const Signup = () => {
          onChange={(e) => [setSenha(e.target.value)]}/>
 
         <label>{error}</label>
-        <button onClick={handleSignup}>Cadastrar</button> 
+        <button className={styles.form_step} onClick={handleSignup}>Cadastrar</button> 
         <br></br>
         <label>
           Já tem uma conta?

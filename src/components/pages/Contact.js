@@ -35,7 +35,7 @@ const data = {
 };
 const styles = {
     bgColor: 'dark pink',
-    rowTitleColor: "purple",
+    rowTitleColor: "rgb(139,0,139)",
     rowContentColor: 'white',
     arrowColor: "purple",
     //rowTitleTextSize: 'medium',
@@ -51,8 +51,8 @@ const config = {
 function Contact(){
     return (
         <div>
-            <h1>Duvidas Frequentes</h1>
-            <b>Aqui estão algumas dúvidas comuns caso tenha algo a mais não esclarecido, entrar em coontato conosco.</b>
+            <h1>Como podemos ajudá-lo?</h1>
+            <b>Aqui estão algumas dúvidas comuns caso tenha algo a mais não esclarecido. Caso não sane a dúvida, entre em contato conosco.</b>
             <Faq
                 data={data}
                 styles={styles}

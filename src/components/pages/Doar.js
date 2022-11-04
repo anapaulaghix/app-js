@@ -94,7 +94,7 @@ function Doar() {
       </Card>
 
 
-      <Card style={{ width: '20rem', margin:'auto', border:'8px' }}>
+      <Card style={{ width: '20rem', margin:'auto', border: '8px'}}>
         <Card.Img className={styles.img} variant="top" src={Roupas} />
         <Card.Body>
           <Card.Title>Roupas</Card.Title>

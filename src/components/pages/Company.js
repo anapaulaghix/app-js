@@ -46,7 +46,7 @@ const Company = () =>{
         <input type="password" placeholder="Senha" name='senha'
         onChange={(e) =>  [setSenha(e.target.value)]}/>
         <label>{error}</label>
-        <button onClick={handleLogin}>Entrar</button>
+        <button className={styles.form_step} onClick={handleLogin}>Entrar</button>
         <label>Não tem uma conta? <Link to="/Signup">&nbsp;Registre-se</Link></label>
         <br></br>
         </form>

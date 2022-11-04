@@ -63,11 +63,11 @@ function Carrinho(){
         onChange={handleChangeValues}></input>
         
         <input type="text" name="doador"
-        placeholder="Email ou informação sobre de quem doou" 
+        placeholder="Email ou informação sobre quem doou" 
         onChange={handleChangeValues}/> 
 
        <input type="text" name="categoria"
-        placeholder="Descricao do produto" 
+        placeholder="Categoria (Alimento, Higiene, etc)" 
         onChange={handleChangeValues}/> 
 
         <input type="number" name="quant" placeholder="Quantidade de produtos" 

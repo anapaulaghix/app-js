@@ -5,7 +5,8 @@
     text-decoration: none;
     transition: 0.5s;
     margin: 25px 25px 25px;
-    display: inline-block;
+    display: grid;
+    grid-row: 1 / span 1;
     font-size: 24px;
     border-radius: 12px;
     width: 30%;

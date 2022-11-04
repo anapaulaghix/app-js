@@ -7,6 +7,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import axios from "axios"
+import { toast } from 'react-toastify';
 
 export default function FormDialog(props) {
 
@@ -51,6 +52,7 @@ export default function FormDialog(props) {
       );
     });
     handleClose();
+    toast.success("Produto editado com sucesso")
   };
 
   const handleDelete = () => {
@@ -62,6 +64,7 @@ export default function FormDialog(props) {
     );
   });
      handleClose()
+     alert("Produto excluido com sucesso")
   }
 
   const handleClose = () => {
