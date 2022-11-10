@@ -29,7 +29,7 @@ function Doar() {
             <li>Arroz e feijão</li>
             <li>Macarrão ou massas</li>
             <li>Grãos: sal, açúcar, trigo, café, fubá, etc. </li>
-            <li>Não aceitaremos alimentos perecíveis e com pouco prazo de validade.</li>
+            <li className={styles.negrito}>Não aceitaremos alimentos perecíveis e com pouco prazo de validade.</li>
             </ul>
           </small>
         </Card.Footer>
@@ -51,7 +51,7 @@ function Doar() {
             <li>Brinquedos educativos</li>
             <li>Pelúcias</li>
             <li>Brinquedos de plástico: bonecas, casinhas, etc. </li>
-            <li>Não aceitaremos brinquedos quebrados ou perigosos </li>
+            <li className={styles.negrito}>Não aceitaremos brinquedos quebrados ou perigosos </li>
             </ul>
           </small>
         </Card.Footer>
@@ -72,7 +72,7 @@ function Doar() {
             <li>Produtos de higiene feminios e masculinos e para crianças</li>
             <li>Escovas de dentes, shampoo, absorventes, papel higiênico, etc. </li>
             <li>Produtos para limpeza de ambiente: detergente, amaciante, etc.</li>
-            <li>Não aceitaremos produtos vencidos</li>
+            <li className={styles.negrito}>Não aceitaremos produtos vencidos</li>
             </ul>
           </small>
         </Card.Footer>
@@ -92,7 +92,7 @@ function Doar() {
           <ul>
             <li>Móveis em bom estado</li>
             <li>Cama, sofá, mesas, cadeiras, etc</li>
-            <li>Não aceitaremos móveis quebrados ou em péssimo estado</li>
+            <li className={styles.negrito}>Não aceitaremos móveis quebrados ou em péssimo estado</li>
             </ul>
           </small>
         </Card.Footer>
