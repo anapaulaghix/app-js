@@ -24,7 +24,13 @@ function Doar() {
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">
-            <input placeholder='Digite aqui' type="text" name="produtos"></input>
+            <ul>
+            <li>Cesta Básica Completa</li>
+            <li>Arroz e feijão</li>
+            <li>Macarrão ou massas</li>
+            <li>Grãos: sal, açúcar, trigo, café, fubá, etc. </li>
+            <li>Não aceitaremos alimentos perecíveis e com pouco prazo de validade.</li>
+            </ul>
           </small>
         </Card.Footer>
       </Card>
@@ -40,7 +46,13 @@ function Doar() {
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">
-          <input placeholder='Digite aqui' type="text" name="produtos"></input>
+         <ul>
+            <li>Brinquedos femininos e masculinos</li>
+            <li>Brinquedos educativos</li>
+            <li>Pelúcias</li>
+            <li>Brinquedos de plástico: bonecas, casinhas, etc. </li>
+            <li>Não aceitaremos brinquedos quebrados ou perigosos </li>
+            </ul>
           </small>
         </Card.Footer>
       </Card>
@@ -56,7 +68,12 @@ function Doar() {
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">
-          <input placeholder='Digite aqui' type="text" name="produtos"></input>
+          <ul>
+            <li>Produtos de higiene feminios e masculinos e para crianças</li>
+            <li>Escovas de dentes, shampoo, absorventes, papel higiênico, etc. </li>
+            <li>Produtos para limpeza de ambiente: detergente, amaciante, etc.</li>
+            <li>Não aceitaremos produtos vencidos</li>
+            </ul>
           </small>
         </Card.Footer>
       </Card>
@@ -72,7 +89,11 @@ function Doar() {
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">
-          <input placeholder='Digite aqui' type="text" name="produtos"></input>
+          <ul>
+            <li>Móveis em bom estado</li>
+            <li>Cama, sofá, mesas, cadeiras, etc</li>
+            <li>Não aceitaremos móveis quebrados ou em péssimo estado</li>
+            </ul>
           </small>
         </Card.Footer>
       </Card>
@@ -83,12 +104,17 @@ function Doar() {
         <Card.Body>
           <Card.Title>Animais</Card.Title>
           <Card.Text>
-           Relacionados a animais: ração e gaiolas, etc.
+           Relacionados a animais: ração, gaiolas, etc.
           </Card.Text>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">
-          <input placeholder='Digite aqui' type="text" name="produtos"></input>
+            <ul>
+            <li>Relacionados a pets em geral, fêmea ou macho, gatos cachorros ou passarinhos</li>
+            <li>Alimento: ração</li>
+            <li>Higiene: areia para gatos, shampoo para cachorros, etc.</li>
+            <li>Brinquedos ou coleiras para os pets</li>
+            </ul>
           </small>
         </Card.Footer>
       </Card>
@@ -104,7 +130,12 @@ function Doar() {
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">
-             <input placeholder='Digite aqui' type="text"  name="produtos"></input></small>
+             <ul>
+            <li></li>
+            <li>Roupas masculinas e femininas</li>
+            <li>Vestidas, calças, camisetas, meias, etc.</li>
+            <li>agasalhos e cobertores para doar no frio.</li>
+            </ul>
         </Card.Footer>
       </Card>
     </Row>
