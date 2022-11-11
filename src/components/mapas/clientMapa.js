@@ -61,7 +61,6 @@ export default function Mapa(){
 
     return(
         <div>
-            <Search />
             <GoogleMap
             mapContainerStyle={mapContainerStyle}
             zoom={8} 
@@ -98,42 +97,4 @@ export default function Mapa(){
             </GoogleMap>
         </div>
     )
-
-    function Search(){
-        const {ready, value, suggestions: {status, data}, setValue, clearSuggestions } = usePlacesAutocomplete({
-            requestOptions: {
-                location: {lat: () => -22.751070, lng: () => -47.333260},
-                radius: 200 * 1000,
-            }
-        })
-
-        const handleSelect = async (address) => {
-            setValue(address, false);
-            clearSuggestions();
-        
-            try {
-              const results = await getGeocode({ address });
-              const { lat, lng } = await getLatLng(results[0]);
-            } catch (error) {
-              console.log("😱 Error: ", error);
-            }
-          };
-
-        return (
-        <div className="search">
-        <Combobox onSelect={handleSelect}
-        >  
-        <ComboboxInput value={value} onChange={(e) => {
-            setValue(e.target.value);
-        }}
-        disabled={!ready}
-        placeholder="Digite o endereço"
-        />
-        <ComboboxPopover >
-        {status === "OK" && data.map(({id, description}) => <ComboboxOption key={id} value={description}/>)}
-        </ComboboxPopover>
-        </Combobox>
-        </div>
-        )
-    }
-}
+              }

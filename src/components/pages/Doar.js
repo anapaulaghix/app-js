@@ -131,11 +131,11 @@ function Doar() {
         <Card.Footer>
           <small className="text-muted">
              <ul>
-            <li></li>
             <li>Roupas masculinas e femininas</li>
             <li>Vestidas, calças, camisetas, meias, etc.</li>
             <li>agasalhos e cobertores para doar no frio.</li>
             </ul>
+        </small>
         </Card.Footer>
       </Card>
     </Row>

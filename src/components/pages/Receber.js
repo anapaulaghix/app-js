@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import {useEffect, useState } from 'react';
 import api from '../services/api'
-import clientMapa from '../mapas/clientMapa'
+import ClientMapa from '../mapas/clientMapa'
 import {Link} from 'react-router-dom';
 
  function Receber(){
@@ -67,7 +67,7 @@ import {Link} from 'react-router-dom';
         value={busca}
         onChange={e =>  setBusca(e.target.value)}>
         </input>
-        <clientMapa/>
+        <ClientMapa/>
       {search(data).map(cadastro => (
         <div>
           <Container>
