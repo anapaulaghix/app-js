@@ -69,32 +69,8 @@ export default function Mapa(){
             onClick={onMapClick}
             onLoad={onMapLoad}
             >
-                {markers.map(marker => <Marker 
-                position={{
-                    lat: marker.lat, lng: marker.lng
-                }} 
-                icon={{
-                    origin: new window.google.maps.Point(0, 0),
-                    anchor: new window.google.maps.Point(15, 15),
-                    scaledSize: new window.google.maps.Size(30, 30),
-                }}
-                  onClick={() => {
-                    setSelected(marker);
-                  }}
-                />)}
-                {selected ? (<InfoWindow position={{lat: selected.lat, lng: selected.lng}} 
-                onCloseClick={() => {setSelected(null)
-                }}>
-                    <div>
-                        <h2>Novo Local</h2>
-                        <h3>Digite o número do estabelecimento</h3>
-                        <input type="number"></input>
-                        <h3>Adicione o CEP desse local</h3>
-                        <input type="number"></input>
-                        <button>Adicionar</button>
-                    </div>
-                </InfoWindow>) : null}
+            <Marker position={center} />
             </GoogleMap>
         </div>
     )
-              }
+}
