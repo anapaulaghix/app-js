@@ -1,8 +1,15 @@
 .footer {
     background-color: #222;
     color: #fff;
-    padding: 1.4em;
+    padding: 2em;
     text-align: center;
+  }
+
+  .footer p{
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
   }
   
   .social_list {
@@ -24,10 +31,3 @@
     cursor: pointer;
   }
   
-  .copy_right {
-    margin-top: 2em;
-  }
-  
-  .copy_right span {
-    font-weight: bold;
-  }

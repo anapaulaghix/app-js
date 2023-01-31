@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.68696b7c.css",
+    "main.js": "./static/js/main.f2ffa00c.js",
+    "static/media/petsss.jpg": "./static/media/petsss.530815c8941e0c238f92.jpg",
+    "static/media/Alimentos.png": "./static/media/Alimentos.f37777eec8f865c73c08.png",
+    "static/media/templatesolidariti.png": "./static/media/templatesolidariti.e33b76621ce91c877316.png",
+    "static/media/fundo7.jpg": "./static/media/fundo7.498687014a8c0a332b61.jpg",
+    "static/media/templatex.png": "./static/media/templatex.a0981e30c9c2d67a47d8.png",
+    "static/media/brinquedos.png": "./static/media/brinquedos.6b86f7acbcf4eb106b77.png",
+    "service-worker.js": "./service-worker.js",
+    "static/media/higiene.png": "./static/media/higiene.115cd44bdd612fc6ea96.png",
+    "static/media/pngwing.png": "./static/media/pngwing.412601ec1be5b318a09b.png",
+    "static/media/solidariti.png": "./static/media/solidariti.d92e3d8298bb6bbac105.png",
+    "static/media/doacao-de-roupas.png": "./static/media/doacao-de-roupas.127d1860c197a2f4032b.png",
+    "index.html": "./index.html",
+    "main.68696b7c.css.map": "./static/css/main.68696b7c.css.map",
+    "main.f2ffa00c.js.map": "./static/js/main.f2ffa00c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68696b7c.css",
+    "static/js/main.f2ffa00c.js"
+  ]
+}

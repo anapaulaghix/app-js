@@ -1,15 +1,15 @@
 .btn {
-    background-color: rgb(228, 214, 214);
-    color: #222;
-    border: 2px solid rgb(176, 22, 214);
+    background-color:  rgb(188, 113, 207);
+    color: rgb(245, 245, 245);
     padding: 15px 32px;
     text-decoration: none;
     transition: 0.5s;
     margin: 25px 25px 25px;
-    display: inline-block;
+    display: grid;
+    grid-row: 1 / span 1;
     font-size: 24px;
-    border-radius: 5px;
-    width: 20%;
+    border-radius: 12px;
+    width: 30%;
     text-align: center;
   }
 

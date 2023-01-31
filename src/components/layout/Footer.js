@@ -6,16 +6,16 @@ function Footer(){
     return (<footer className={styles.footer}>
          <ul className={styles.social_list}>
             <li>
-                <FaFacebook />
+                <FaFacebook /> facebook
             </li>
             <li>
-                <FaInstagram />
+                <FaInstagram /> instagram
             </li>
             <li>
-                <SiPicpay />
+                <SiPicpay /> picpay
             </li>
             <li>
-                <SiGmail />
+                <SiGmail /> gmail
             </li>
         </ul>
         <p className={styles.copy_right}><span>Solidariti | Nos acompanhem nas nossas redes sociais</span> &copy; 2022</p>
