@@ -3,16 +3,16 @@ import Faq from "react-faq-component";
 const data = {
     rows: [
         {
-            title: "Como posso acompanhar meu pedido?",
-            content: `Assim que finalizar seu pedido será confirmado onde poderão ser retirados seus produtos, pedimos cerca de 3 dias para buscar.`,
+            title: "Posso acompanhar algum pedido?",
+            content: `Não, quem acompanha o pedido ou doação de algum produto é o contribuinte. Você deverá fazer o pedido na hora de ir buscá-lo no ponto de coleta desejado.`,
         },
         {
             title: "Onde posso levar os produtos desejados para doar?",
             content:
-                "Após escolher os produtos que serão doados aparecerá uma lista de locais onde ficam armazenados os produtos, será preciso apenas escolher o local mais próximo e levar.",
+                "Após escolher os produtos que serão doados, poderá buscar na aba Ajudantes uma lista de locais onde ficam armazenados os produtos, será preciso apenas escolher o local mais próximo e levar.",
         },
         {
-            title: "Meu pedido virá embalado",
+            title: "Meu pedido virá embalado?",
             content: `Os alimentos irão na sua própria embalagem, as embalagens dos produtos como móves e roupas serão feitas de acordo com os doadores.`,
         },
         {
@@ -25,7 +25,7 @@ const data = {
         },
         {
             title: "Como sei que os produtos doados serão entregues?",
-            content: `Assim que os produtos chegarem ao local combinado, aparecerão na página para recebimentos e ficará lá até o momento que ele for selecionado.`,
+            content: `Saberá pelo ajudante, os produtos serão doados por ordem em que forem pedidos primeiro.`,
         },
         {
             title: "Ainda possui dúvidas?",

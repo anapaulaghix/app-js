@@ -74,7 +74,7 @@ export default function FormDialog(props) {
   return (
     <div>
       <Dialog open={props.open} onClose={handleClose}>
-        <DialogTitle>Editar ou Excluir</DialogTitle>
+        <DialogTitle>Excluir</DialogTitle>
         <DialogContent>
           <DialogContentText>
            Edite o produto mostrado caso haja erros ou exclua
